@@ -14,7 +14,7 @@ class POINT(ctypes.Structure):
 while True:
   current_time = datetime.now().strftime("%H:%M:%S")
   wait_time = random.randint(0, wait_max)
-  if current_time == stop_time:
+  if current_time >= stop_time:
     print("Quitting time")
     break
 screen_width = ctypes.windll.user32.GetSystemMetrics(0)
